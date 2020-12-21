@@ -1,0 +1,70 @@
+<nav class="navbar" style="background: #FFFFFF; box-shadow: 0px 4px 4px rgba(0,0,0,0.25);">
+    <a href = "#" [routerLink] ="['/misindicadores']" class = "text-dark" style = "text-decoration: none;"><span class="navbar-brand mb-0 h1 px-3"><i class="fas fa-arrow-left"></i> Agregar compromisos</span></a>
+</nav>
+<div class = "container">
+    <p class = "mt-5"><strong>Selecciona los compromisos que realizaras hoy</strong></p>
+
+    <ul class="list-group">
+        <li class="d-flex justify-content-between align-items-center py-3">
+          Morosas
+          <button [routerLink] ="['/agregarempresarias']" type="button" class="btn" style = "color: #6F41D9;">AGREGAR</button >
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+          Convenios
+          <button [routerLink] ="['/agregarcompromisos']" type="button" class="btn" style = "color: #6F41D9;">AGREGAR</button >
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+          Herramientas de rescate
+          <button [routerLink] ="['/agregarcompromisos']" type="button" class="btn" style = "color: #6F41D9;">AGREGAR</button >
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+            Productivas
+            <span>
+                <button (click)="restar('Productivas')" type="button" class="btn" style = "color: #C5B3F0; border-color: #C5B3F0; border-radius: 50%;"><i class="fas fa-minus"></i></button >
+                <span class = "mx-3">{{ contadorProductivas }}</span>
+                <button (click)="sumar('Productivas')" type="button" class="btn" style = "color: #6F41D9; border-color: #6F41D9; border-radius: 50%;"><i class="fas fa-plus"></i></button >
+            </span>
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+            Únicas
+            <span>
+                <button (click)="restar('Unicas')" type="button" class="btn" style = "color: #C5B3F0; border-color: #C5B3F0; border-radius: 50%;"><i class="fas fa-minus"></i></button >
+                <span class = "mx-3">{{ contadorUnicas }}</span>
+                <button (click)="sumar('Unicas')" type="button" class="btn" style = "color: #6F41D9; border-color: #6F41D9; border-radius: 50%;"><i class="fas fa-plus"></i></button >
+            </span>
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+            Visitas
+            <span>
+                <button (click)="restar('Visitas')" type="button" class="btn" style = "color: #C5B3F0; border-color: #C5B3F0; border-radius: 50%;"><i class="fas fa-minus"></i></button >
+                <span class = "mx-3">{{ contadorVisitas }}</span>
+                <button (click)="sumar('Visitas')" type="button" class="btn" style = "color: #6F41D9; border-color: #6F41D9; border-radius: 50%;"><i class="fas fa-plus"></i></button >
+            </span>
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+            Legales
+            <span>
+                <button (click)="restar('Legales')" type="button" class="btn" style = "color: #C5B3F0; border-color: #C5B3F0; border-radius: 50%;"><i class="fas fa-minus"></i></button >
+                <span class = "mx-3">{{ contadorLegales }}</span>
+                <button (click)="sumar('Legales')" type="button" class="btn" style = "color: #6F41D9; border-color: #6F41D9; border-radius: 50%;"><i class="fas fa-plus"></i></button >
+            </span>
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+            Colocación
+            <div class="form-group" style = "width: 35%;">
+                <input type="text" class="form-control" placeholder="$0.00">
+            </div>
+        </li>
+        <li class="d-flex justify-content-between align-items-center py-3">
+            Ventas CrediTienda
+            <div class="form-group" style = "width: 35%;">
+                <input type="text" class="form-control" placeholder="$0.00">
+            </div>
+        </li>
+    </ul>
+
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" (click)="guardarCompromisos()" type="button">GUARDAR</button>
+      </div>
+
+</div>
